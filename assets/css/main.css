@@ -1956,7 +1956,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #d6a50f;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2209,9 +2209,18 @@ input, select, textarea {
 			-moz-flex-direction: column;
 			-webkit-flex-direction: column;
 			-ms-flex-direction: column;
+			justify-content: center; 
 			flex-direction: column;
 			margin-left: 0;
 		}
+		ul.actions.stacked li {
+			width: auto; /* evita que ocupen todo el ancho */
+			}
+
+			ul.actions.stacked li a {
+			display: inline-block;
+			text-align: center;
+			}
 
 			ul.actions.stacked li {
 				padding: 1em 0 0 0;
@@ -2439,7 +2448,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #116a43;
+			background-color: #d6a50f;
 		}
 
 		input[type="submit"]:active,
@@ -2447,7 +2456,7 @@ input, select, textarea {
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: #116a43;
+			background-color: #2d522d;
 		}
 
 		input[type="submit"].icon:before,
@@ -2817,8 +2826,8 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #e9c54f;
-			color: #776528;
+			background-color: #284928;
+			color: #73D173;
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -2842,7 +2851,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style1 header p {
-				color: #a6e0db;
+				color: #73D173;
 			}
 
 			.wrapper.style1 header.major h2, .wrapper.style1 header.major h3, .wrapper.style1 header.major h4, .wrapper.style1 header.major h5, .wrapper.style1 header.major h6 {
@@ -2871,7 +2880,7 @@ input, select, textarea {
 
 				.wrapper.style1 select option {
 					color: #ffffff;
-					background: #e9c54f;
+					background: #284928;
 				}
 
 			.wrapper.style1 input[type="checkbox"] + label,
@@ -2887,27 +2896,27 @@ input, select, textarea {
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #e9c54f;
+				color: #73D173;
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
-				color: #e9c54f !important;
+				color: #73D173 !important;
 			}
 
 			.wrapper.style1 :-moz-placeholder {
-				color: #e9c54f !important;
+				color: #73D173 !important;
 			}
 
 			.wrapper.style1 ::-moz-placeholder {
-				color: #e9c54f !important;
+				color: #73D173 !important;
 			}
 
 			.wrapper.style1 :-ms-input-placeholder {
-				color: #e9c54f !important;
+				color: #73D173 !important;
 			}
 
 			.wrapper.style1 .formerize-placeholder {
-				color: #e9c54f !important;
+				color: #73D173 !important;
 			}
 
 			.wrapper.style1 .icon.major {
@@ -2976,11 +2985,11 @@ input, select, textarea {
 			}
 
 		.wrapper.style2 {
-			background-color: #d6a50f;
+			background-color: #4E8D4E;
 		}
 
 		.wrapper.style3 {
-			background-color: #e9c54f;
+			background-color: #4E8D4E;
 			color: #d3d4e4;
 		}
 
@@ -3707,8 +3716,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 7em 3em 5em 3em ;
-				height: auto;
+				padding: 7em 4em 5em 3em ;
+				height: 70vh;
 				min-height: 0;
 			}
 
@@ -3757,7 +3766,9 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		max-width: 45em;
+		max-width: 45em;	
+		justify-content: center; /* centra horizontal */
+		align-items: center;     /* centra vertical */
 	}
 
 		#cta .inner header {
@@ -3784,7 +3795,10 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#cta .inner {
-				display: block;
+				display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+				display: flex;
 				text-align: center;
 			}
 
@@ -3794,6 +3808,9 @@ input, select, textarea {
 				}
 
 				#cta .inner .actions {
+					-moz-order: 2;
+			-webkit-order: 2;
+			-ms-order: 2;
 					margin-left: auto;
 					margin-right: auto;
 					max-width: 20em;
@@ -3989,10 +4006,11 @@ input, select, textarea {
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
-	}
+		padding-top: 0;}
 
 	body.is-mobile.landing #footer {
 		background-color: #2b522d;
