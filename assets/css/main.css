@@ -3978,62 +3978,63 @@ input, select, textarea {
     }
 }
 .carrusel {
-      position: relative;
-      max-width: 900px;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+  }
 
-    .carrusel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
+  .carrusel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+  }
 
+  .carrusel-slide {
+    flex: 0 0 50%; /* 2 por fila en escritorio */
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .carrusel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover; /* evita deformaciones */
+  }
+
+  .carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 10;
+  }
+
+  .carrusel-btn:hover {
+    background: rgba(0,0,0,0.8);
+  }
+
+  .carrusel-btn.prev {
+    left: 10px;
+  }
+
+  .carrusel-btn.next {
+    right: 10px;
+  }
+
+  @media (max-width: 768px) {
     .carrusel-slide {
-      min-width: 50%; /* se ven dos a la vez */
-      transition: transform 0.3s ease;
+      flex: 0 0 100%; /* en móvil solo 1 imagen */
     }
-
-    .carrusel-slide img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 10px;
-    }
-
-    /* Botones */
-    .carrusel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 50%;
-      font-size: 18px;
-    }
-
-    .carrusel-btn:hover {
-      background: rgba(0,0,0,0.8);
-    }
-
-    .carrusel-btn.prev {
-      left: 10px;
-    }
-
-    .carrusel-btn.next {
-      right: 10px;
-    }
-
-    @media (max-width: 768px) {
-      .carrusel-slide {
-        min-width: 100%; /* en móvil se ve solo 1 */
-      }
-    }
+  }
 /* Footer */
 
 	#footer {
