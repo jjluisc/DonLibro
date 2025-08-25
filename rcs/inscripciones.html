@@ -124,7 +124,9 @@
 							<h2>Gestiona tu entrada</h2>
 						</header>
 						
-						<form class="form-inscripcion">
+						<form class="form-inscripcion" action="https://formsubmit.co/joseluislufe@gmail.com" method="POST">
+							<input type="hidden" name="_subject" value="¡Inscripciones de entrada!">
+
 							<label for="nombre">Nombre completo</label>
 							<input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
 
@@ -147,6 +149,8 @@
 							</select>
 
 							<button type="submit" class="btn-inscripcion">ENVIAR INSCRIPCIÓN</button>
+							<input type="hidden" name="_captcha" value="false">
+							<input type="hidden" name="_next" value="./agenda.html">
 				</form>
 				<!-- Footer -->
 					<footer id="footer">
