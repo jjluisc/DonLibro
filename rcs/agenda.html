@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Agenda</title>
+		<link href="../images/icon.png" rel="icon">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<style>
+			.agenda {
+				max-width: 900px;
+				margin: auto;
+				}
+				.agenda-header {
+				background: linear-gradient(to right, #2e7d32, #4caf50);
+				color: #fff;
+				padding: 12px;
+				font-size: 20px;
+				font-weight: bold;
+				text-align: center;
+				border-radius: 6px 6px 0 0;
+				}
+				.agenda-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 15px;
+				background: #fff;
+				padding: 20px;
+				border-radius: 0 0 6px 6px;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+				}
+				.evento {
+				display: flex;
+				align-items: flex-start;
+				background: #e8f5e9;
+				border-radius: 6px;
+				overflow: hidden;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+				}
+				.hora {
+				background: #2e7d32;
+				color: #fff;
+				text-align: center;
+				padding: 10px;
+				min-width: 70px;
+				font-weight: bold;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				}
+				.hora span {
+				font-size: 14px;
+				}
+				.detalle {
+				padding: 10px;
+				font-size: 14px;
+				color: #333;
+				}
+				.detalle strong {
+				display: block;
+				font-size: 15px;
+				margin-bottom: 5px;
+				color: #1b5e20;
+				}
+				@media (max-width: 768px) {
+				.agenda-grid {
+					grid-template-columns: 1fr;
+				}
+				}
+		</style>
+	</head>
+	<body class="is-preload" style="background-color: white;">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html">Don Libro</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="../index.html">Inicio</a></li>
+											<li><a href="../rcs/inscripciones.html">Inscripción/Entrada</a></li>
+											<li><a href="../rcs/generic.html">Nosotros</a></li>
+											<li><a href="../rcs/maraton.html">Maratón</a></li>
+											<li><a href="../rcs/concursos.html">Concursos</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Agenda</h2>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+								<div class="agenda">
+								<div class="agenda-header">Martes 26 de agosto</div>
+								<div class="agenda-grid">
+									<div class="evento">
+									<div class="hora">09:30<br><span>AM</span></div>
+									<div class="detalle">
+										<strong>Foro:</strong> Narrativas digitales con propósito
+									</div>
+									</div>
+									<div class="evento">
+									<div class="hora">11:00<br><span>AM</span></div>
+									<div class="detalle">
+										<strong>Presentación del libro:</strong> Mitos y realidades de la política monetaria
+									</div>
+									</div>
+								</div>
+								</div>							
+							</div>
+							<div class="agenda">
+								<div class="agenda-header">Martes 26 de agosto</div>
+								<div class="agenda-grid">
+									<div class="evento">
+									<div class="hora">09:30<br><span>AM</span></div>
+									<div class="detalle">
+										<strong>Foro:</strong> Narrativas digitales con propósito
+									</div>
+									</div>
+									<div class="evento">
+									<div class="hora">11:00<br><span>AM</span></div>
+									<div class="detalle">
+										<strong>Presentación del libro:</strong> Mitos y realidades de la política monetaria
+									</div>
+									</div>
+								</div>
+								</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://www.instagram.com/donlibroocana/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li>
+							<a href="mailto:contacto@feriadellibroocana.org?subject=Consulta%20sobre%20Don%20Libro&body=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n.%0AGracias."
+								class="icon solid fa-envelope">
+								<span class="label">Email</span>
+							</a>
+							</li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; 2025</li><li>Don Bosco Fundation</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
