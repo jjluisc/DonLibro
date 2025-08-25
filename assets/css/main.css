@@ -3969,7 +3969,14 @@ input, select, textarea {
 
 	body.is-mobile #main1 > header {
 		background-attachment: scroll;
+		background-size: cover;
 	}
+	@media screen and (max-width: 768px) {
+    #main1 > header {
+        background-attachment: scroll;
+        background-size: cover;
+    }
+}
 
 /* Footer */
 
@@ -4094,10 +4101,4 @@ input, select, textarea {
 
 	body.is-mobile.landing #footer {
 		background-color: #2b522d;
-	}
-
-	.bootstrap-form .form-control,
-	.bootstrap-form .form-select,
-	.bootstrap-form .btn {
-	all: revert; /* Revierte solo dentro del formulario */
 	}
