@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Entrada</title>
+		<link href="../images/icon.png" rel="icon">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+		<style>
+		/* Contenedor del formulario */
+		.form-inscripcion {
+		max-width: 450px;
+		margin: 40px auto;
+		padding: 20px;
+		border: 2px solid #2f5c2f; /* Borde especial dorado */
+		border-radius: 12px;
+		background: #fff;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		font-family: Arial, sans-serif;
+		}
+
+		/* Labels */
+		.form-inscripcion label {
+		display: block;
+		margin: 10px 0 5px;
+		font-weight: bold;
+		color: #333;
+		font-family: 'Unbounded', 'Times New Roman', Times, serif;
+		}
+
+		/* Inputs y select */
+		.form-inscripcion input,
+		.form-inscripcion select {
+		width: 100%;
+		padding: 14px;
+		margin-bottom: 15px;
+		border: 1px solid #ccc;
+		border-radius: 6px;
+		font-size: 10px;
+		color: #333; /* Texto visible */
+		background: #f9f9f9;
+		font-family: 'Unbounded', 'Times New Roman', Times, serif;
+		}
+
+		.form-inscripcion input::placeholder {
+		color: #999;
+		}
+
+		/* Botón con degradado */
+		.btn-inscripcion {
+		display: block;
+		width: 100%;
+		padding: 12px;
+		background: linear-gradient(45deg, #9DD19D, #2f5c2f);
+		border: none;
+		border-radius: 8px;
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #fff; /* Texto blanco */
+		cursor: pointer;
+		align-items: center;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+		letter-spacing: 1px;
+		font-family: 'Unbounded', 'Times New Roman', Times, serif;
+		}
+
+		.btn-inscripcion:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+		}
+
+		/* Versión móvil */
+		@media (max-width: 600px) {
+		.form-inscripcion {
+			width: 90%;
+			margin: 20px auto;
+			padding: 15px;
+		}
+
+		.btn-inscripcion {
+			font-size: 14px;
+			padding: 10px;
+		}
+		}
+		</style>
+
+	</head>
+	<body class="is-preload" style="background-color: #9DD19D;">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html">Don Libro</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="../index.html">Inicio</a></li>
+											<li><a href="../rcs/agenda.html">Agenda</a></li>
+											<li><a href="../rcs/generic.html">Nosotros</a></li>
+											<li><a href="../rcs/maraton.html">Maratón</a></li>
+											<li><a href="../rcs/concursos.html">Concursos</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main1">
+						<header>
+							<h2>Gestiona tu entrada</h2>
+						</header>
+						
+						<form class="form-inscripcion">
+							<label for="nombre">Nombre completo</label>
+							<input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+
+							<label for="correo">Correo electrónico</label>
+							<input type="email" id="correo" name="correo" placeholder="Escribe tu correo">
+
+							<label for="telefono">Teléfono</label>
+							<input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono">
+
+							<label for="edad">Edad</label>
+							<input type="number" id="edad" name="edad" placeholder="Tu edad">
+
+							<label for="soy">Soy...</label>
+							<select id="soy" name="soy" aria-placeholder="Selecciona">
+								<option value="estudiante">Estudiante</option>
+								<option value="padre">Padre</option>
+								<option value="invitado">Invitados</option>
+								<option value="particular">Particular</option>
+								<option value="otro">Otro</option>
+							</select>
+
+							<button type="submit" class="btn-inscripcion">ENVIAR INSCRIPCIÓN</button>
+				</form>
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://www.instagram.com/donlibroocana/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li>
+							<a href="mailto:contacto@feriadellibroocana.org?subject=Consulta%20sobre%20Don%20Libro&body=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n.%0AGracias."
+								class="icon solid fa-envelope">
+								<span class="label">Email</span>
+							</a>
+							</li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; 2025</li><li>Don Bosco Fundation</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
