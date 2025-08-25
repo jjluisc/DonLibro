@@ -39,23 +39,24 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Lorem ipsum dolor</h2>
-							<p>Aliquam ut ex ut interdum donec amet imperdiet eleifend</p>
+							<h2>Don Libro: Feria Literaria</h2>
+							<p>Somos un evento cultural que promueve la lectura y la cultura.</p>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
 
-								<h3>Lorem ipsum dolor</h3>
-								<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
-
-								<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec dui cursus, posuere dui eget interdum. Fusce lectus magna, sagittis at facilisis vitae, pellentesque at etiam. Quisque posuere leo quis sem commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+								<h3>Misión</h3>
+								<p>Fomentar la lectura y la creación literaria en la región, exaltando el talento local y nacional. La feria busca potenciar el emprendimiento cultural y editorial, ofreciendo una amplia oferta de libros y experiencias que acerquen a niños, jóvenes y adultos al conocimiento, la imaginación y la cultura.</p>
 
 								<hr />
 
-								<h4>Feugiat aliquam</h4>
-								<p>Nam sapien ante, varius in pulvinar vitae, rhoncus id massa. Donec varius ex in mauris ornare, eget euismod urna egestas. Etiam lacinia tempor ipsum, sodales porttitor justo. Aliquam dolor quam, semper in tortor eu, volutpat efficitur quam. Fusce nec fermentum nisl. Aenean erat diam, tempus aliquet erat.</p>
+								<h4>Visión</h4>
+								<p> Consolidar a Don Libro como una feria literaria de referencia a nivel nacional, que siga inspirando a los jóvenes a descubrir en la lectura y la creatividad un camino de crecimiento personal y colectivo, proyectando a Ocaña como un territorio de encuentro cultural.</p>
+								
+								<hr />
 
-								<p>Etiam iaculis nulla ipsum, et pharetra libero rhoncus ut. Phasellus rutrum cursus velit, eget condimentum nunc blandit vel. In at pulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui, at vestibulum sit amet, auctor bibendum neque.</p>
+								<h4>Objetivos</h4>
+								<p>Fomentar la lectura, exaltar la creación literaria, potenciar el emprendimiento cultural y editorial, hacer una amplia oferta de libros y conexos.</p>
 
 							</div>
 						</section>
@@ -84,52 +85,53 @@
 					</div>
 
 					<script>
-						const track = document.querySelector('.carrusel-track');
-						const slides = Array.from(track.children);
-						const prevButton = document.querySelector('.carrusel-btn.prev');
-						const nextButton = document.querySelector('.carrusel-btn.next');
+					const track = document.querySelector('.carrusel-track');
+					const slides = Array.from(track.children);
+					const prevButton = document.querySelector('.carrusel-btn.prev');
+					const nextButton = document.querySelector('.carrusel-btn.next');
 
-						let index = 0;
-						let slidesToShow = window.innerWidth <= 768 ? 1 : 2; 
+					let index = 0;
 
-						function updateCarousel() {
-						const slideWidth = slides[0].getBoundingClientRect().width;
+					function slidesToShow() {
+						return window.innerWidth <= 768 ? 1 : 2;
+					}
+
+					function updateCarousel() {
+						const slideWidth = slides[0].offsetWidth; // más confiable que getBoundingClientRect() en iOS
 						track.style.transform = `translateX(-${index * slideWidth}px)`;
-						}
+					}
 
-						nextButton.addEventListener('click', () => {
-						if (index < slides.length - slidesToShow) {
-							index++;
+					nextButton.addEventListener('click', () => {
+						if (index < slides.length - slidesToShow()) {
+						index++;
 						} else {
-							index = 0; // vuelve al inicio
+						index = 0; // reinicia
 						}
 						updateCarousel();
-						});
+					});
 
-						prevButton.addEventListener('click', () => {
+					prevButton.addEventListener('click', () => {
 						if (index > 0) {
-							index--;
+						index--;
 						} else {
-							index = slides.length - slidesToShow;
+						index = slides.length - slidesToShow();
 						}
 						updateCarousel();
-						});
+					});
 
-						// autoplay cada 3s
-						setInterval(() => {
-						if (index < slides.length - slidesToShow) {
-							index++;
+					// autoplay cada 3s
+					setInterval(() => {
+						if (index < slides.length - slidesToShow()) {
+						index++;
 						} else {
-							index = 0;
+						index = 0;
 						}
 						updateCarousel();
-						}, 3000);
+					}, 3000);
 
-						window.addEventListener('resize', () => {
-						slidesToShow = window.innerWidth <= 768 ? 1 : 2;
-						updateCarousel();
-						});
+					window.addEventListener('resize', updateCarousel);
 					</script>
+
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
