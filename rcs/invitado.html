@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Nosotros</title>
+		<title>Invitados</title>
 		<link href="../images/icon.png" rel="icon">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -38,8 +38,7 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Don Libro: Feria Literaria</h2>
-							<p>Somos un evento cultural que promueve la lectura y la cultura.</p>
+							<h2>INVITADOS</h2>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
@@ -60,76 +59,6 @@
 							</div>
 						</section>
 					</article>
-					  <div style="padding: 50px 10px;" class="carrusel">
-						<div class="carrusel-track">
-						<div class="carrusel-slide"><img src="../images/carrusel/foto1.jpg" alt="Foto 1"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto2.jpg" alt="Foto 2"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto3.jpg" alt="Foto 3"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto4.jpg" alt="Foto 4"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto5.jpg" alt="Foto 5"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto6.jpg" alt="Foto 6"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto7.jpg" alt="Foto 7"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto8.jpg" alt="Foto 8"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto9.jpg" alt="Foto 9"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto10.jpg" alt="Foto 10"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto11.jpg" alt="Foto 11"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto12.jpg" alt="Foto 12"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto13.jpg" alt="Foto 13"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto14.jpg" alt="Foto 14"></div>
-						<div class="carrusel-slide"><img src="../images/carrusel/foto15.jpg" alt="Foto 15"></div>
-						</div>
-
-						<button class="carrusel-btn prev">&#10094;</button>
-						<button class="carrusel-btn next">&#10095;</button>
-					</div>
-
-					<script>
-					const track = document.querySelector('.carrusel-track');
-					const slides = Array.from(track.children);
-					const prevButton = document.querySelector('.carrusel-btn.prev');
-					const nextButton = document.querySelector('.carrusel-btn.next');
-
-					let index = 0;
-
-					function slidesToShow() {
-						return window.innerWidth <= 768 ? 1 : 2;
-					}
-
-					function updateCarousel() {
-						const slideWidth = slides[0].offsetWidth; // más confiable que getBoundingClientRect() en iOS
-						track.style.transform = `translateX(-${index * slideWidth}px)`;
-					}
-
-					nextButton.addEventListener('click', () => {
-						if (index < slides.length - slidesToShow()) {
-						index++;
-						} else {
-						index = 0; // reinicia
-						}
-						updateCarousel();
-					});
-
-					prevButton.addEventListener('click', () => {
-						if (index > 0) {
-						index--;
-						} else {
-						index = slides.length - slidesToShow();
-						}
-						updateCarousel();
-					});
-
-					// autoplay cada 3s
-					setInterval(() => {
-						if (index < slides.length - slidesToShow()) {
-						index++;
-						} else {
-						index = 0;
-						}
-						updateCarousel();
-					}, 3000);
-
-					window.addEventListener('resize', updateCarousel);
-					</script>
 
 				<!-- Footer -->
 					<footer id="footer">
